@@ -1,0 +1,5 @@
+/home/camelia/Projects/Politique/Politique/bin/Debug/Politique.exe
+/home/camelia/Projects/Politique/Politique/bin/Debug/Politique.pdb
+/home/camelia/Projects/Politique/Politique/obj/x86/Debug/Politique.csproj.CoreCompileInputs.cache
+/home/camelia/Projects/Politique/Politique/obj/x86/Debug/Politique.exe
+/home/camelia/Projects/Politique/Politique/obj/x86/Debug/Politique.pdb

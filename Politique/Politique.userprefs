@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{304BF92A-5676-404F-AD51-51D15CA0C118}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Politique/ReadMetier.cs">
+    <Files>
+      <File FileName="Politique/Program.cs" Line="39" Column="67" />
+      <File FileName="Politique/CSV.cs" Line="32" Column="9" />
+      <File FileName="Politique/ReadMetier.cs" Line="77" Column="51" />
+      <File FileName="Politique/ModeleMetier.cs" Line="212" Column="2" />
+      <File FileName="Politique/Membre.cs" Line="70" Column="2" />
+      <File FileName="Politique/Parti.cs" Line="85" Column="2" />
+      <File FileName="Politique/XML.cs" Line="30" Column="6" />
+      <File FileName="Politique/Cus.cs" Line="36" Column="90" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/camelia/Projects/Politique/Politique/XML.cs" relfile="Politique/XML.cs" line="10" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Politique PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
