@@ -62,8 +62,12 @@
             if (parti == null){
                 return -1;
             }else{
-                return parti.GetId();
+                return parti.Id;
             }
+        }
+
+        public string Tostring(){
+            return (id.ToString() + " " + name + " " + GetPartiId().ToString() +"\n");
         }
 
     }

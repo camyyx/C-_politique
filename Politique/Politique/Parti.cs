@@ -73,7 +73,7 @@ namespace Politique
         public string GiveLesMembres(){
             string s = "";
             foreach(Membre elt in membres){
-                s = s + elt.GetName() + "\n"; 
+                s = s + elt.Name + "\n"; 
             }
             return s;
         }
@@ -81,5 +81,9 @@ namespace Politique
         public List<Membre> GetMembres(){
             return membres;
         }
+        public string Tostring(){
+            return (id.ToString() + " " + name + " " + GiveLesMembres());
+        }
     }
+
 }

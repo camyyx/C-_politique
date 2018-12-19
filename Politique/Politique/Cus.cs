@@ -48,7 +48,5 @@ namespace Politique
             }
             return lists;
         }
-
-
     }
 }

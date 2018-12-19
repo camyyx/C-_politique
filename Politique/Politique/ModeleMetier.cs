@@ -52,8 +52,8 @@ namespace Politique
                 List<string> list = new List<string>();
                 foreach (Membre elt in membres)
                 {
-                    list.Add(elt.GetId().ToString());
-                    list.Add(elt.GetName());
+                    list.Add(elt.Id.ToString());
+                    list.Add(elt.Name);
                     list.Add(elt.GetPartiId().ToString());
                     lists.Add(list);
                     list.Clear();
@@ -63,12 +63,12 @@ namespace Politique
 
                 foreach (Parti elt in partis)
                 {
-                    list.Add(elt.GetId().ToString());
-                    list.Add(elt.GetName());
-                    list.Add(elt.GetLeChef().ToString());
+                    list.Add(elt.Id.ToString());
+                    list.Add(elt.Name);
+                    list.Add(elt.Chef.Id.ToString());
                     foreach (Membre m in elt.GetMembres())
                     {
-                        list.Add(m.GetId().ToString());
+                        list.Add(m.Id.ToString());
                     }
                     lists.Add(list);
                     list.Clear();
@@ -95,11 +95,11 @@ namespace Politique
             {
                 Dictionary<string, string> list = new Dictionary<string, string>
                 {
-                    { "id", elt.GetId().ToString() },
-                    { "name", elt.GetName() },
+                    { "id", elt.Id.ToString() },
+                    { "name", elt.Name },
                     { "parti", elt.GetPartiId().ToString() }
                 };
-                lists.Add("membre" + elt.GetId().ToString(), list);
+                lists.Add("membre" + elt.Id.ToString(), list);
             }
             Json.Enregistrer(pathMembres, lists);
             lists.Clear();
@@ -107,15 +107,15 @@ namespace Politique
             {
                 Dictionary<string, string> list = new Dictionary<string, string>
                 {
-                    { "id", elt.GetId().ToString() },
-                    { "name", elt.GetName() },
-                    { "chef", elt.GetLeChef().GetId().ToString() }
+                    { "id", elt.Id.ToString() },
+                    { "name", elt.Name },
+                    { "chef", elt.Chef.Id.ToString() }
                 };
                 foreach (Membre m in elt.GetMembres())
                 {
-                    list.Add("membre" + m.GetId().ToString(), m.GetId().ToString());
+                    list.Add("membre" + m.Id.ToString(), m.Id.ToString());
                 }
-                lists.Add("parti" + elt.GetId().ToString(), list);
+                lists.Add("parti" + elt.Id.ToString(), list);
             }
             Json.Enregistrer(pathPartis, lists);
         }
@@ -136,11 +136,11 @@ namespace Politique
             {
                 Dictionary<string, string> list = new Dictionary<string, string>
                 {
-                    { "id", elt.GetId().ToString() },
-                    { "name", elt.GetName() },
+                    { "id", elt.Id.ToString() },
+                    { "name", elt.Name },
                     { "parti", elt.GetPartiId().ToString() }
                 };
-                lists.Add("membre" + elt.GetId().ToString(), list);
+                lists.Add("membre" + elt.Id.ToString(), list);
             }
 
             XML.Enregistrer(pathMembres, lists);
@@ -149,15 +149,15 @@ namespace Politique
             {
                 Dictionary<string, string> list = new Dictionary<string, string>
                 {
-                    { "id", elt.GetId().ToString() },
-                    { "name", elt.GetName() },
-                    { "chef", elt.GetLeChef().GetId().ToString() }
+                    { "id", elt.Id.ToString() },
+                    { "name", elt.Name },
+                    { "chef", elt.Chef.Id.ToString() }
                 };
                 foreach (Membre m in elt.GetMembres())
                 {
-                    list.Add("membre" + m.GetId().ToString(), m.GetId().ToString());
+                    list.Add("membre" + m.Id.ToString(), m.Id.ToString());
                 }
-                lists.Add("parti" + elt.GetId().ToString(), list);
+                lists.Add("parti" + elt.Id.ToString(), list);
             }
             XML.Enregistrer(pathPartis, lists);
         }
@@ -175,8 +175,8 @@ namespace Politique
             {
                 List<string> list = new List<string>
                 {
-                    elt.GetId().ToString(),
-                    elt.GetName(),
+                    elt.Id.ToString(),
+                    elt.Name,
                     elt.GetPartiId().ToString()
                 };
                 lists.Add(list);
@@ -187,12 +187,12 @@ namespace Politique
             {
                 List<string> list = new List<string>
                 {
-                    elt.GetId().ToString(),
-                    elt.GetName(),
-                    elt.GetLeChef().GetId().ToString()
+                    elt.Id.ToString(),
+                    elt.Name,
+                    elt.Chef.Id.ToString()
                 };
                 foreach (Membre m in elt.GetMembres()){
-                    list.Add(m.GetId().ToString());
+                    list.Add(m.Id.ToString());
                 }
                 lists.Add(list);
             }

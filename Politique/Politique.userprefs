@@ -1,14 +1,15 @@
 ﻿<Properties StartupConfiguration="{304BF92A-5676-404F-AD51-51D15CA0C118}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Politique/ReadMetier.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Politique/Program.cs">
     <Files>
-      <File FileName="Politique/Program.cs" Line="39" Column="67" />
+      <File FileName="Politique/Program.cs" Line="41" Column="47" />
+      <File FileName="Politique/ReadMetier.cs" Line="69" Column="22" />
+      <File FileName="Politique/ModeleMetier.cs" Line="31" Column="43" />
+      <File FileName="Politique/Membre.cs" Line="65" Column="32" />
+      <File FileName="Politique/Parti.cs" Line="76" Column="33" />
+      <File FileName="Politique/XML.cs" Line="14" Column="72" />
+      <File FileName="Politique/Cus.cs" Line="50" Column="10" />
+      <File FileName="Politique/String Wtriter.cs" Line="2" Column="34" />
       <File FileName="Politique/CSV.cs" Line="32" Column="9" />
-      <File FileName="Politique/ReadMetier.cs" Line="77" Column="51" />
-      <File FileName="Politique/ModeleMetier.cs" Line="212" Column="2" />
-      <File FileName="Politique/Membre.cs" Line="70" Column="2" />
-      <File FileName="Politique/Parti.cs" Line="85" Column="2" />
-      <File FileName="Politique/XML.cs" Line="30" Column="6" />
-      <File FileName="Politique/Cus.cs" Line="36" Column="90" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

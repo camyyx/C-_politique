@@ -4,14 +4,39 @@ using System.Collections.Generic;
 
 namespace Politique
 {
-    public static class ReadMetier
+    public class ReadMetier
+
     {
-        
-        private static void Read(string path, string format)
+        private List<Parti> lespartis;
+        private List<Membre> lesmembres;
+
+        public void Getmembres()
+        {
+            foreach (Membre m in lesmembres)
+            {
+                Console.WriteLine(m.Tostring());
+            }
+        }
+        public void Getpartis(){
+            foreach (Parti p in lespartis)
+            {
+                Console.WriteLine(p.Tostring());
+            }
+        }
+
+
+
+        public ReadMetier(){
+            lespartis = new List<Parti>();
+            lesmembres = new List<Membre>();
+        }
+
+        public void Read(string path, string format)
         {
             string pathMembers = "";
             string pathPartis = "";
-            using(StreamReader reader = File.OpenText(path)){
+            using (StreamReader reader = File.OpenText(path))
+            {
                 pathMembers = reader.ReadLine();
                 pathPartis = reader.ReadLine();
             }
@@ -20,31 +45,30 @@ namespace Politique
                 case "csv":
                     ReadCSV(pathMembers, pathPartis);
                     break;
-                case "xml":
-                    ChargerXML( pathMembers, pathPartis);
-                    break;
-                case "json":
-                    ChargerJSON(pathMembers, pathPartis);
-                    break;
+                //case "xml":
+                //    ChargerXML(pathMembers, pathPartis);
+                //    break;
+                //case "json":
+                    //ChargerJSON(pathMembers, pathPartis);
+                    //break;
                 default:
                     throw new Exception("Format non reconnu");
             }
         }
 
-        static void ChargerJSON( string pathMembers, string pathPartis)
-        {
-            throw new NotImplementedException();
-        }
+        //static void ChargerJSON(string pathMembers, string pathPartis)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        static void ChargerXML( string pathMembers, string pathPartis)
-        {
-            throw new NotImplementedException();
-        }
+        //static void ChargerXML(string pathMembers, string pathPartis)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        private static void ReadCSV(string pathMembers, string pathPartis)
+        public void ReadCSV(string pathMembers, string pathPartis)
         {
-            List<Parti> lespartis = new List<Parti>();
-            List<Membre> lesmembres = new List<Membre>();
+            
             List<List<string>> listsMembres = CSV.Read(pathMembers);
             Dictionary<Membre, int> membres = new Dictionary<Membre, int>();
             foreach (List<string> listMembre in listsMembres){
@@ -87,7 +111,8 @@ namespace Politique
                             break;
                         case 2:
                             chef = int.Parse(list[i]);
-                            //TODO: membre.entry
+                            membre = membres.GetEnumerator();
+                            membre.MoveNext();
                             while(membre.MoveNext()){
                                 if (membre.Current.Key.Id == chef && membre.Current.Value == parti.Id){
                                     parti.Chef = membre.Current.Key;
@@ -96,10 +121,12 @@ namespace Politique
                             }
                             break;
                         case int n when (n > 2 && n < list.Count):
-                            //TODO membre.entry
+                            membre = membres.GetEnumerator();
+                            membre.MoveNext();
                             while (membre.MoveNext()){
                                 if(membre.Current.Key.Id == int.Parse(list[i]) && membre.Current.Value == parti.Id){
                                     membre.Current.Key.Parti = parti;
+                                    lesmembres.Add(membre.Current.Key);
                                     break;
                                 }
                             }
