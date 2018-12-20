@@ -36,7 +36,7 @@ namespace Politique
         }
        
 
-        public void Enregistrer(string path, string format, string eltbr, string linebr){
+        public void Enregistrer(string path, string format, char eltbr, char linebr){
             List<List<string>> lists = new List<List<string>>();
             if (format == "custom"){
                 string pathMembres, pathPartis;

@@ -38,11 +38,45 @@ namespace Politique
             ////Console.WriteLine(path);
             ////Console.WriteLine(path1);
             //modele.Enregistrer("/home/camelia/tests/log.txt","json");
-            ReadMetier reader = new ReadMetier();
-            reader.ReadCSV("/home/camelia/tests/membres.cvs", "/home/camelia/tests/partis.csv");
-            reader.Getmembres();
+            //ReadMetier reader = new ReadMetier();
+            //reader.ReadCSV("/home/camelia/tests/membres.cvs", "/home/camelia/tests/partis.csv");
+            //reader.Getmembres();
+            //Console.WriteLine("les partis");
+            //reader.Getpartis();
+            //Console.WriteLine("les membres");
+            //List<List<string>> list = CSV.Read("/home/camelia/tests/membres.cvs");
+            //foreach(List<string> l in list){
+            //    foreach(string s in l){
+            //        Console.WriteLine(s);
+            //    }
+            //}
+            //Console.WriteLine("les partis");
+            //list = CSV.Read("/home/camelia/tests/partis.csv");
+            //foreach (List<string> l in list)
+            //{
+            //    foreach (string s in l)
+            //    {
+            //        Console.WriteLine(s);
+            //    }
+            //}
+            Console.WriteLine("les membres");
+            List<List<string>> list = Cus.Read("/home/camelia/tests/membres.cus",'|', 'ù');
+            foreach (List<string> l in list)
+            {
+                foreach (string s in l)
+                {
+                    Console.WriteLine(s);
+                }
+            }
             Console.WriteLine("les partis");
-            reader.Getpartis();
+            list = Cus.Read("/home/camelia/tests/partis.cus", '|', 'ù');
+            foreach (List<string> l in list)
+            {
+                foreach (string s in l)
+                {
+                    Console.WriteLine(s);
+                }
+            }
         }
     }
 }

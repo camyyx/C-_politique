@@ -6,7 +6,7 @@ namespace Politique
 {
     internal class Cus
     {
-        internal static void Enregistrer(string path, string eltbr, string linebr, List<List<string>> lists)
+        internal static void Enregistrer(string path, char eltbr, char linebr, List<List<string>> lists)
         {
             using (StreamWriter writer = new StreamWriter(path, false))
             {
@@ -18,7 +18,7 @@ namespace Politique
             }
         }
         //todo:methodes name
-        private static string CusLine(List<string> list, string eltbr)
+        private static string CusLine(List<string> list, char eltbr)
         {
             string s = "";
             if (list.Count > 0)
@@ -33,16 +33,17 @@ namespace Politique
         }
 
 
-        internal static List<List<string>> Read(string path, string brline, string britem)
+        internal static List<List<string>> Read(string path, char brline, char britem)
         {
             List<List<string>> lists = new List<List<string>>();
             string line = "";
             using (StreamReader reader = new StreamReader(path))
             {
-                while ((line = reader.ReadLine()) != null)
-                {
-                    string[] coll = line.Split(new char[] { ',' });
-                    List<string> list = new List<string>(coll);
+                line = reader.ReadToEnd();
+                string[] coll = line.Split(new char[] { brline });
+                foreach(string s in coll){
+                    string[] elts = s.Split(new char[] { britem });
+                    List<string> list = new List<string>(elts);
                     lists.Add(list);
                 }
             }
