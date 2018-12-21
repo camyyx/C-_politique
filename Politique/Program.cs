@@ -59,24 +59,25 @@ namespace Politique
             //        Console.WriteLine(s);
             //    }
             //}
-            Console.WriteLine("les membres");
-            List<List<string>> list = Cus.Read("/home/camelia/tests/membres.cus",'|', 'ù');
-            foreach (List<string> l in list)
-            {
-                foreach (string s in l)
-                {
-                    Console.WriteLine(s);
-                }
-            }
-            Console.WriteLine("les partis");
-            list = Cus.Read("/home/camelia/tests/partis.cus", '|', 'ù');
-            foreach (List<string> l in list)
-            {
-                foreach (string s in l)
-                {
-                    Console.WriteLine(s);
-                }
-            }
+            //Console.WriteLine("les membres");
+            //List<List<string>> list = Cus.Read("/home/camelia/tests/membres.cus",'|', 'ù');
+            //foreach (List<string> l in list)
+            //{
+            //    foreach (string s in l)
+            //    {
+            //        Console.WriteLine(s);
+            //    }
+            //}
+            //Console.WriteLine("les partis");
+            //list = Cus.Read("/home/camelia/tests/partis.cus", '|', 'ù');
+            //foreach (List<string> l in list)
+            //{
+            //    foreach (string s in l)
+            //    {
+            //        Console.WriteLine(s);
+            //    }
+            //}
+            XML.Read("/home/camelia/tests/membres.xml");
         }
     }
 }
