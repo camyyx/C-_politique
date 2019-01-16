@@ -28,6 +28,15 @@
                 name = value;
             }
         }
+        string prenom;
+        public string Prenom{
+            get{
+                return prenom;
+            }
+            set{
+                prenom = value;
+            }
+        }
         private Parti parti;
         public Parti Parti    // the Name property
         {
@@ -42,17 +51,20 @@
             }
         }
 
-        public Membre(string name){
+        public Membre(string name, string prenom){
             this.name = name;
+            this.prenom = prenom;
             id = number++;
             parti = null;
         }
-        public Membre(string name, int id){
+        public Membre(string name,string prenom,  int id){
             this.name = name ;
+            this.prenom = prenom;
             this.id = id;
         }
         public Membre(){
             name = "inconnu";
+            prenom = "inconnu";
             id = number++;
         }
 

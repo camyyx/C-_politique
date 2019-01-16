@@ -97,6 +97,7 @@ namespace Politique
                 {
                     { "id", elt.Id.ToString() },
                     { "name", elt.Name },
+                    {"prenom", elt.Prenom},
                     { "parti", elt.GetPartiId().ToString() }
                 };
                 lists.Add("membre" + elt.Id.ToString(), list);
@@ -177,6 +178,7 @@ namespace Politique
                 {
                     elt.Id.ToString(),
                     elt.Name,
+                    elt.Prenom,
                     elt.GetPartiId().ToString()
                 };
                 lists.Add(list);

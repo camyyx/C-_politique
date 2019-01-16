@@ -51,8 +51,6 @@ namespace Politique
                 Console.WriteLine("tag : " + contenttag);
 
 
-
-
             }
             return result;
         }

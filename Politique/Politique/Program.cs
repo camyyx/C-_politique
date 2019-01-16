@@ -8,7 +8,7 @@ namespace Politique
     {
         static void Main(string[] args)
         {
-            //Membre UnCandidat = new Membre("Donald");
+            //Membre UnCandidat = new Membre("Trump","Donald");
             //Membre UnautreCandidat = new Membre();
             //Membre UndernierCandidat = new Membre();
             //UnautreCandidat.Name ="Hilary";
@@ -38,17 +38,19 @@ namespace Politique
             ////Console.WriteLine(path);
             ////Console.WriteLine(path1);
             //modele.Enregistrer("/home/camelia/tests/log.txt","json");
-            //ReadMetier reader = new ReadMetier();
-            //reader.ReadCSV("/home/camelia/tests/membres.cvs", "/home/camelia/tests/partis.csv");
-            //reader.Getmembres();
-            //Console.WriteLine("les partis");
-            //reader.Getpartis();
+            ReadMetier reader = new ReadMetier();
+            reader.ReadCSV("/home/camelia/tests/membres.cvs", "/home/camelia/tests/partis.csv");
+            Console.WriteLine("les membres");
+            reader.Getmembres();
+            Console.WriteLine("les partis");
+            reader.Getpartis();
             //Console.WriteLine("les membres");
             //List<List<string>> list = CSV.Read("/home/camelia/tests/membres.cvs");
             //foreach(List<string> l in list){
             //    foreach(string s in l){
             //        Console.WriteLine(s);
             //    }
+            //    Console.WriteLine(" ");
             //}
             //Console.WriteLine("les partis");
             //list = CSV.Read("/home/camelia/tests/partis.csv");
@@ -58,6 +60,7 @@ namespace Politique
             //    {
             //        Console.WriteLine(s);
             //    }
+            //    Console.WriteLine(" ");
             //}
             //Console.WriteLine("les membres");
             //List<List<string>> list = Cus.Read("/home/camelia/tests/membres.cus",'|', 'ù');
@@ -67,6 +70,7 @@ namespace Politique
             //    {
             //        Console.WriteLine(s);
             //    }
+
             //}
             //Console.WriteLine("les partis");
             //list = Cus.Read("/home/camelia/tests/partis.cus", '|', 'ù');
@@ -77,7 +81,12 @@ namespace Politique
             //        Console.WriteLine(s);
             //    }
             //}
-            XML.Read("/home/camelia/tests/membres.xml");
+            //XML.Read("/home/camelia/tests/membres.xml");
+            //ReadMetier reader = new ReadMetier();
+            //reader.ReadCSV("/home/camelia/tests/membres.cvs", "/home/camelia/tests/partis.csv");
+            //reader.Getmembres();
+            //Console.WriteLine("les partis");
+            //reader.Getpartis();
         }
     }
 }

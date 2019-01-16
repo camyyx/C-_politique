@@ -1,0 +1,7 @@
+/home/camelia/Projects/testDLL/testDLL/bin/Debug/testDLL.exe
+/home/camelia/Projects/testDLL/testDLL/bin/Debug/testDLL.pdb
+/home/camelia/Projects/testDLL/testDLL/bin/Debug/CameliaCalculator.dll
+/home/camelia/Projects/testDLL/testDLL/bin/Debug/CameliaCalculator.pdb
+/home/camelia/Projects/testDLL/testDLL/obj/x86/Debug/testDLL.csproj.CoreCompileInputs.cache
+/home/camelia/Projects/testDLL/testDLL/obj/x86/Debug/testDLL.exe
+/home/camelia/Projects/testDLL/testDLL/obj/x86/Debug/testDLL.pdb

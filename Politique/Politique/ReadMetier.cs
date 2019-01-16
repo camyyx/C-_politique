@@ -98,9 +98,9 @@ namespace Politique
             {
                 Parti parti  = new Parti();
                 int chef = -1;
-                Dictionary<Membre, int>.Enumerator membre = membres.GetEnumerator();
                 for (int i = 0; i < list.Count; i++)
                 {
+                    Dictionary<Membre, int>.Enumerator membre = membres.GetEnumerator();
                     switch (i)
                     {
                         case 0:

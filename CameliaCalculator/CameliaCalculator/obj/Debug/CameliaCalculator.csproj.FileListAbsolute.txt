@@ -1,0 +1,5 @@
+/home/camelia/Projects/CameliaCalculator/CameliaCalculator/bin/Debug/CameliaCalculator.dll
+/home/camelia/Projects/CameliaCalculator/CameliaCalculator/bin/Debug/CameliaCalculator.pdb
+/home/camelia/Projects/CameliaCalculator/CameliaCalculator/obj/Debug/CameliaCalculator.csproj.CoreCompileInputs.cache
+/home/camelia/Projects/CameliaCalculator/CameliaCalculator/obj/Debug/CameliaCalculator.dll
+/home/camelia/Projects/CameliaCalculator/CameliaCalculator/obj/Debug/CameliaCalculator.pdb
